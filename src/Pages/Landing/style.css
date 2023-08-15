@@ -1,0 +1,24 @@
+.heroo{
+    width: 100vw;
+    height:80vh;
+    background-image: url(../../Components/Utilis//images/hero.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 20px;
+}
+h1{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+p{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.button{
+    border-radius: 50%;
+}
