@@ -1,11 +1,11 @@
 import React from 'react';
-import {NavBar, Footer} from '../../Components'
+import {NavBar} from '../../Components'
 
 const Layout = ({children})=> {
 return <>
 <NavBar/>
  {children}
-<Footer/>
+{/* <Footer/> */}
 </>
 }
 
