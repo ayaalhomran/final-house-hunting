@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import SearchIcon from '@mui/icons-material/Search';
- import Hero from '../Utilis/images/hero.png';
+ import Hero from '../Utilis/images/logo.png';
 import'./style.css';
 
 const pages = ['Home ', 'AboutUs'];
@@ -105,7 +105,7 @@ function NavBar() {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
+              fontFamily: 'poppins',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -135,7 +135,7 @@ function NavBar() {
     
             <Button variant="contained" className='log_in' style={{ backgroundColor: '#F4D160',marginRight: '10px' }}>log in</Button>
 
-             <Button variant="contained"className='sign_up' style={{backgroundColor:'#ffffff9d'}}>
+             <Button variant="contained"className='sign_up' style={{backgroundColor:'#FFFFFF' , color:'#1A1A1A'}}>
               Sign up </Button>
             <Menu
               sx={{ mt: '45px' }}
