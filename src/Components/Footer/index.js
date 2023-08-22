@@ -1,19 +1,21 @@
 import  React from 'react';
-import {AppBar ,Box,Toolbar, backdropClasses } from '@mui/material';
+import {AppBar ,Box,Toolbar } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-// import SearchIcon from '@mui/icons-material/Search';
- import Hero from '../Utilis/images/logo.png';
-import'./style.css';
+import Hero from '../../img/logo.png';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import './style.css';
 
-const pages = ['Home', 'AboutUs'];
+
+const pages = ['contact', 'AboutUs'];
 const settings = ['Profile', 'Favorite', 'Logout'];
 
 function NavBar() {
@@ -34,9 +36,10 @@ function NavBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  
 
   return (
-    <AppBar position="static" style={{ backgroundColor: '#013244' }}>
+    <AppBar position="static" style={{ backgroundColor: '#013244' }} className='footer'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -53,12 +56,15 @@ function NavBar() {
               color: 'inherit',
               textDecoration: 'none',
             }}
-            
           >
-             <img src={Hero} className='hero' alt="Description of the image" />
-             {/* <Avatar alt="Logo"  sx={{ display: { xs: 'none', md: 'flex' }, marginLeft: 1 }} /> */}
+            
+            <img src={Hero} className='hero' alt="Description of the image" />
           </Typography>
-        
+          <div>
+      <LinkedInIcon style={{ color: '#FFFFFF', fontSize: 30, margin: '0 10px' }} />
+      <TwitterIcon style={{ color: '#FFFFFF', fontSize: 30, margin: '0 10px' }} />
+      <InstagramIcon style={{ color: '#FFFFFF', fontSize: 30, margin: '0 10px' }} />
+      </div>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -96,6 +102,7 @@ function NavBar() {
               ))}
             </Menu>
           </Box>
+          
           <Typography
             variant="h5"
             noWrap
@@ -105,14 +112,14 @@ function NavBar() {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'poppins',
+              fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-            Hunting
+            
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -132,11 +139,7 @@ function NavBar() {
             
               </IconButton>
             </Tooltip>
-    
-            <Button variant="contained" className='log_in' style={{ backgroundColor: '#F4D160',marginRight: '10px' }}>log in</Button>
-
-             <Button variant="contained"className='sign_up' style={{backgroundColor:'#FFFFFF' , color:'#1A1A1A'}}>
-              Sign up </Button>
+            <p>Reserved Rights All — 2023©</p>
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"

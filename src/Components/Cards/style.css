@@ -1,0 +1,90 @@
+.card {
+    border: 1px solid #7D7D7D;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  
+  .media {
+    max-height: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .media img {
+    width: 364px;
+    object-fit: cover;
+  }
+  
+  
+  .detailsLink {
+    background-color: #EB9235;
+    border: 1px solid #EB9235;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 3px;
+    transition: all 0.25s;
+  }
+  
+  .favorite {
+    color: #7D7D7D;
+  }
+  
+  .cardaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cardTitle {
+    color: #FFC107;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 50px;
+    
+  }
+  
+  
+  /* .description {
+    padding-top: 0.5em;
+    font-size: 1.4em;
+    color: #7D7D7D;
+  } */
+  
+  /* .cardDetails {
+    padding-top: 0.5em;
+    color: #FFC107;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+   */
+ 
+  .iconBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .oneiconBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .iconBox p {
+    padding-top: 8px;
+  }
+  
+ 
+  .icon {
+    color: #2A5555;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  
+
+  
