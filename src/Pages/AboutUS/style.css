@@ -1,0 +1,27 @@
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+   color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* .image-overlay h3 {
+    margin: 0;
+} */
+.flex-container{
+    display: flex;
+    margin: 40px;
+}
+.title{
+    color:#1D5D9B;
+    font-size: 24px;
+    margin-bottom: 10px;
+}

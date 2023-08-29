@@ -1,4 +1,47 @@
-.footer{
+.footer {
+    background-color: #1D5D9B; 
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .footer-heading {
+    color: #F4D160; 
+  }
+  
+  .footer-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-list li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-list a {
+    color:#FFFFFF; /* لون روابط القائمة */
+    text-decoration: none;
+  }
+  
+  .footer-list a:hover {
+    text-decoration: underline; /* تحتين عند تحويم الفأرة */
+  }
+  
+  .social-icons {
     display: flex;
- justify-content: space-between;
-}
+    gap: 10px;
+  }
+  
+  .social-icons svg {
+    color: #FFFFFF; 
+  
+  }
+  .copyright{
+    color: #FFFFFF !important;
+  }
+ 
+  
+  
+  
+  
+  

@@ -1,60 +1,39 @@
-import React, { useState, useEffect } from "react";
-import { Button, Container, Typography } from '@mui/material';
- import about from '../../Components/Utilis/images/house.png';
-import CardContainer from '../../Components/CardContainer'
-import './style.css'
-
-
+import React, { useEffect, useState } from 'react';
+import CardContainer from '../../Components/CardContainer';
+import Typography from '@mui/material/Typography';
+import { Hero } from '../../Components';
 const Landing = () => {
-
-
-  const [houses, setHouses] = useState([]);
-
-  useEffect(() => {
-    // Fetch houses data from the API
-    fetch("https://my-json-server.typicode.com/ayaalhomran/api/house")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("data", data )
-        setHouses(data);
-
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
-
-  return (
-
-    <>
-      <section style={{ textAlign: 'center' }} className="heroo">
-        <div className="hero-content">
-          <h1>SWEET HOME FOR SMALL FAMILY</h1>
-          <p> Allow us to guide you through the innovative stress-free approach in finding your dream Properties.</p>
-          <Button variant="contained" className='button' style={{ backgroundColor: '#FFC107', marginTop: '16px' }}> search</Button>
-        </div>
-      </section>
-      <section className='us'>
-        <h1 style={{ color: '#FFC107' }}>about us</h1>
-      </section>
-      <section className='about-us'>
-        <img src={about} className='about-img' />
-
-        <p style={{ color: '#000000' }}>Welcome to our real estate website! We take pride in offering <br /> a comprehensive andistinguished platform designed to facilitate the process of searching and facilitate the process of searching and finding the perfect property for you.
-          We <br />understand that real estate represents a significant investment <br />in the lives of individuals and families.to our real estate website! We take pride in offering a comprehensive andistinguished platform designed to facilitate the process of searching and  </p>
-      </section>
-
-      <Container maxWidth="lg">
-        <div className="housesSection">
-          <Typography variant="h3" className="sectionTitle">
-            Best Sellers House
-          </Typography>
-          
-          <CardContainer houses={houses} className="card"/>
-        </div>
-      </Container>
-    </>
-  );
-};
-
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        fetch('https://my-json-server.typicode.com/ayaalhomran/api/house')
+            .then(response => response.json())
+            .then(data => setData(data))
+            .catch(error => console.error('ERROR', error));
+    }, []);
+    return (
+        <>
+                <Hero/>
+            <Typography variant="h4" align="center" gutterBottom style={
+                {
+                    paddingTop: '30px',
+                    fontWeight: 'bold',
+                    color:'#2455A9',
+                }
+            }>
+            Best Collection On Sale</Typography>
+            <Typography variant="p" align="center" gutterBottom style={
+                {
+                    paddingBottom: '1px',
+                    fontWeight: 'bold',
+                    color:'#1a1a1a',
+                    display:'flex',
+                    textAlign:'center',
+                    justifyContent:'center'
+                }
+            }>Get your dream property right now and get best seller</Typography>
+            {console.log(data, 'houses')}
+            <CardContainer houses={data} />
+        </>
+    );
+}
 export default Landing;
