@@ -1,11 +1,24 @@
-.log_in{
-    background-color:#F4D160;
-    border-radius: 50%;
+*{
+    margin: 0;
+    padding: 0;
 }
-.sign_up{
-  border-radius: 50%;
+.baceground{
+    background-color: #1D5D9B;
+   
 }
-.hero{
-    height: 50%;
-    width: 50%;
+.logo{
+   width: 140px !important;
+}
+.nav-links{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 14px;
+}
+.linksign{
+    text-decoration: none !important;
+    color: #1a1a1a;
+}
+.linksignup{
+    text-decoration: none !important;
+    color: #1a1a1a;
 }
